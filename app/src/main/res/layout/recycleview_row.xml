@@ -73,7 +73,7 @@
         android:id="@+id/star1"
         android:layout_toRightOf="@+id/numStarTxt"
         android:src="@drawable/ic__star"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
     <ImageView
         android:layout_width="20dp"
@@ -84,7 +84,7 @@
         android:layout_toRightOf="@+id/star1"
         android:id="@+id/star2"
         android:src="@drawable/ic__star"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
     <ImageView
         android:layout_width="20dp"
@@ -95,7 +95,7 @@
         android:layout_toRightOf="@+id/numStarTxt"
         android:id="@+id/star3"
         android:src="@drawable/ic__star"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/star4"
@@ -106,5 +106,5 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/star3"
         android:src="@drawable/ic__star"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 </RelativeLayout>
