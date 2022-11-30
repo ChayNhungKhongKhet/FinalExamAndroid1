@@ -30,34 +30,22 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/levelTxt"
+        android:id="@+id/describedTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nameTxt"
+        android:layout_below="@id/numStarTxt"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/cardView_image"
         android:fontFamily="sans-serif-medium"
-        android:text="Level"
+        android:text="Described"
         android:textSize="18dp" />
 
-
-    <TextView
-        android:id="@+id/countryTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nameTxt"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/levelTxt"
-        android:fontFamily="sans-serif-medium"
-        android:text="Country"
-        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/numStarTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/levelTxt"
+        android:layout_below="@id/nameTxt"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/cardView_image"
         android:fontFamily="sans-serif-medium"
@@ -68,7 +56,7 @@
         android:id="@+id/star1"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/levelTxt"
+        android:layout_below="@id/nameTxt"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/numStarTxt"
@@ -76,35 +64,35 @@
         android:visibility="invisible" />
 
     <ImageView
+        android:id="@+id/star2"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/levelTxt"
+        android:layout_below="@id/nameTxt"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/star1"
-        android:id="@+id/star2"
         android:src="@drawable/ic__star"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@id/levelTxt"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/star2"
         android:id="@+id/star3"
+        android:layout_width="14dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/nameTxt"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/star2"
         android:src="@drawable/ic__star"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/star4"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_below="@id/levelTxt"
+        android:layout_below="@id/nameTxt"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/star3"
         android:src="@drawable/ic__star"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 </RelativeLayout>

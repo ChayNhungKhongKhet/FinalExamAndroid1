@@ -17,22 +17,22 @@ public class CustomAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
-    private List<CongAn> congAns;
+    private List<Author> authors;
 
-    public CustomAdapter(Context context, int layout, List<CongAn> congAns) {
+    public CustomAdapter(Context context, int layout, List<Author> authors) {
         this.context = context;
         this.layout = layout;
-        this.congAns = congAns;
+        this.authors = authors;
     }
 
     @Override
     public int getCount() {
-        return congAns.size();
+        return authors.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return congAns.get(i);
+        return authors.get(i);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     private static class ViewHolder {
-        TextView name,level,country;
+        TextView name, described;
         ImageView avatar;
         private ImageView star1;
         private ImageView star3;
@@ -59,8 +59,7 @@ public class CustomAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.avatar = convertView.findViewById(R.id.image);
             viewHolder.name = convertView.findViewById(R.id.nameTxt);
-            viewHolder.level = convertView.findViewById(R.id.levelTxt);
-            viewHolder.country = convertView.findViewById(R.id.countryTxt);
+            viewHolder.described = convertView.findViewById(R.id.describedTxt);
             viewHolder.star1 = convertView.findViewById(R.id.star1);
             viewHolder.star2 = convertView.findViewById(R.id.star2);
             viewHolder.star3 = convertView.findViewById(R.id.star3);
@@ -70,17 +69,16 @@ public class CustomAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         } else
             viewHolder = (ViewHolder) convertView.getTag();
-        CongAn congAn = congAns.get(position);
+        Author author = authors.get(position);
 
-        viewHolder.name.setText(congAn.getName());
-        viewHolder.level.setText("Level: "+congAn.getLevel());
-        viewHolder.country.setText(congAn.getCountry());
+        viewHolder.name.setText(author.getName());
+        viewHolder.described.setText("Described: "+ author.getDescribed());
         List<ImageView> imageViews = new ArrayList<>();
         imageViews.add(viewHolder.star1);
         imageViews.add(viewHolder.star2);
         imageViews.add(viewHolder.star3);
         imageViews.add(viewHolder.star4);
-        for (int i = 0; i < congAn.getNumStar(); i++) {
+        for (int i = 0; i < author.getNumStar(); i++) {
             imageViews.get(i).setVisibility(View.VISIBLE);
         }
         return convertView;
